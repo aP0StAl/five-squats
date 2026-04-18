@@ -1,0 +1,18 @@
+{
+  "name": "Five Squats",
+  "short_name": "5Squats",
+  "description": "Мягкий дневной трекер приседаний: маленькие подходы в течение дня и понятный прогресс к вечернему плану.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8faf7",
+  "theme_color": "#0f8b8d",
+  "icons": [
+    {
+      "src": "assets/icon.svg?v=3",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

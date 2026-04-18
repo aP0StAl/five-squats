@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0f8b8d">
+    <meta name="description" content="Маленькие подходы приседаний в течение дня и понятный прогресс к вечернему плану.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="5Squats">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Five Squats</title>
+    <link rel="manifest" href="manifest.webmanifest?v=3">
+    <link rel="icon" href="assets/icon.svg?v=3" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/icon.svg?v=3">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <img class="app-icon" src="assets/icon.svg?v=3" alt="" width="48" height="48">
+        <div>
+          <p class="eyebrow">Сегодня</p>
+          <h1>Приседания</h1>
+        </div>
+      </header>
+
+      <section class="status-band" aria-labelledby="current-plan-title">
+        <div class="status-copy">
+          <p class="label" id="current-plan-title">К текущему часу</p>
+          <p class="current-value"><span id="catchUpNow">0</span></p>
+          <p class="status-note" id="statusNote">До 08:00 можно не спешить.</p>
+        </div>
+        <div class="progress-wrap" aria-label="Прогресс за день">
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <p id="progressText">0 из 70</p>
+        </div>
+      </section>
+
+      <section class="quick-actions" aria-label="Быстрые действия">
+        <button class="primary-action" type="button" data-add="5">+5</button>
+        <button class="primary-action accent" type="button" data-add="10">+10</button>
+        <button class="secondary-action" type="button" id="undoButton">Отменить</button>
+      </section>
+
+      <section class="metrics" aria-label="Сводка">
+        <article>
+          <p class="metric-label">Сделано</p>
+          <p class="metric-value" id="doneToday">0</p>
+        </article>
+        <article>
+          <p class="metric-label">Осталось</p>
+          <p class="metric-value" id="remainingToday">70</p>
+        </article>
+        <article>
+          <p class="metric-label">План сейчас</p>
+          <p class="metric-value" id="expectedNow">0</p>
+        </article>
+      </section>
+
+      <section class="settings-panel" aria-labelledby="settings-title">
+        <details>
+          <summary id="settings-title">Настройки и данные</summary>
+          <form class="settings-form" id="settingsForm">
+            <label>
+              Старт
+              <input type="time" id="startTime" name="startTime" value="08:00">
+            </label>
+            <label>
+              Финиш
+              <input type="time" id="endTime" name="endTime" value="22:00">
+            </label>
+            <label>
+              В час
+              <input type="number" id="ratePerHour" name="ratePerHour" min="1" max="200" step="1" value="5">
+            </label>
+            <button class="secondary-action save-settings" type="submit">Сохранить</button>
+          </form>
+          <div class="data-actions">
+            <button class="secondary-action" type="button" id="exportButton">Экспорт JSON</button>
+            <label class="file-import">
+              Импорт JSON
+              <input type="file" id="importInput" accept="application/json,.json">
+            </label>
+          </div>
+          <p class="small-note">Данные хранятся только в этом браузере. Экспорт пригодится для переноса или бэкапа.</p>
+        </details>
+      </section>
+
+      <section class="history-section" aria-labelledby="history-title">
+        <div class="section-heading">
+          <h2 id="history-title">История</h2>
+          <p id="historyRange">Последние дни</p>
+        </div>
+        <div class="history-list" id="historyList"></div>
+      </section>
+    </main>
+
+    <template id="historyItemTemplate">
+      <article class="history-item">
+        <div>
+          <p class="history-date"></p>
+          <p class="history-summary"></p>
+        </div>
+        <span class="history-badge"></span>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

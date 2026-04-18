@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Five Squats logo option 8</title>
+  <rect width="512" height="512" rx="84" fill="#f8faf7"/>
+  <path d="M146 176h144c30 0 54 24 54 54s-24 54-54 54h-78l-36 84h84" fill="none" stroke="#171717" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M292 284l72 44-38 91h74" fill="none" stroke="#0f8b8d" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="342" cy="116" r="42" fill="#ef476f"/>
+  <circle cx="120" cy="108" r="13" fill="#ffd166"/>
+  <circle cx="166" cy="108" r="13" fill="#ffd166"/>
+  <circle cx="212" cy="108" r="13" fill="#ffd166"/>
+  <circle cx="258" cy="108" r="13" fill="#ffd166"/>
+  <circle cx="304" cy="108" r="13" fill="#ffd166"/>
+</svg>
