@@ -1,11 +1,14 @@
-const CACHE_NAME = "five-squats-v3";
+const CACHE_NAME = "five-squats-v4";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./styles.css",
   "./app.js",
-  "./manifest.webmanifest?v=3",
-  "./assets/icon.svg?v=3"
+  "./manifest.webmanifest?v=4",
+  "./assets/icon.svg?v=4",
+  "./assets/apple-touch-icon.png?v=4",
+  "./assets/icon-192.png?v=4",
+  "./assets/icon-512.png?v=4"
 ];
 
 self.addEventListener("install", (event) => {
